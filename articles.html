@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агроснаб Невельск - Полезные статьи</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для страницы статей */
+        .articles-hero {
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .articles-hero h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .articles-hero p {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #e8f5e9;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            /* Убрал transition, теперь карточки не двигаются */
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .article-card .content {
+            padding: 25px;
+        }
+
+        .article-card .tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .article-card h3 {
+            text-align: left;
+            color: #2e7d32;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .article-card p {
+            text-align: left;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .article-card .date {
+            color: #999;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-card .date::before {
+            content: "📅";
+        }
+
+        /* Статистика */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stats-row .stat-item {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            border-bottom: 4px solid #2e7d32;
+        }
+
+        .stats-row .stat-item .number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .stats-row .stat-item .label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .articles-hero h1 {
+                font-size: 2rem;
+            }
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Агроснаб Невельск</h1>
+            <nav>
+                <ul>
+                    <li><a href="Task.html">Главная</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="articles.html" class="active">Полезные статьи</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero-блок страницы статей -->
+            <div class="articles-hero">
+                <h1>📚 Полезные статьи для фермеров</h1>
+                <p>Советы агрономов, рекомендации по уходу за растениями и новости сельского хозяйства</p>
+            </div>
+
+            <!-- Статистика -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="number">9</div>
+                    <div class="label">всего статей</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">10 +</div>
+                    <div class="label">лет практики</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">1+</div>
+                    <div class="label">Прочтений</div>
+                </div>
+            </div>
+
+            <!-- Сетка статей -->
+            <div class="articles-grid">
+                <div class="article-card">
+                    <img src="f5eaa9463949b6.jpg" alt="Как выбрать семена">
+                    <div class="content">
+                        <span class="tag">Семена</span>
+                        <h3>Как правильно выбрать семена для вашего участка</h3>
+                        <p>Подробный гайд по выбору семян с учётом климата Невельского района и типа почвы.</p>
+                        <div class="date">15 мая 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="YDOBREN.jpeg" alt="Удобрения">
+                    <div class="content">
+                        <span class="tag">Удобрения</span>
+                        <h3>Лучшие удобрения для картофеля весной</h3>
+                        <p>Какие удобрения внести весной для получения богатого урожая картофеля.</p>
+                        <div class="date">2 апреля 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="DEFENSE.webp" alt="Защита растений">
+                    <div class="content">
+                        <span class="tag">Защита</span>
+                        <h3>Как защитить растения от вредителей без химии</h3>
+                        <p>Экологичные методы борьбы с вредителями, которые работают на практике.</p>
+                        <div class="date">20 марта 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="тракторист.jpg" alt="Техника">
+                    <div class="content">
+                        <span class="tag">Техника</span>
+                        <h3>Как выбрать мотоблок для частного хозяйства</h3>
+                        <p>Советы по выбору мотоблока, культиватора и другого оборудования.</p>
+                        <div class="date">10 февраля 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="INVENTAR.jpg" alt="Инвентарь">
+                    <div class="content">
+                        <span class="tag">Инвентарь</span>
+                        <h3>Топ-5 незаменимых инструментов для сада</h3>
+                        <p>Качественный инвентарь, который должен быть у каждого садовода.</p>
+                        <div class="date">25 января 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="agrospan.jpg" alt="Укрывной материал">
+                    <div class="content">
+                        <span class="tag">Укрывной материал</span>
+                        <h3>Как выбрать агроспан и для чего он нужен</h3>
+                        <p>Разбираем виды укрывных материалов и их применение в огороде.</p>
+                        <div class="date">5 января 2024</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="f5eaa9463949b6.jpg" alt="Полив">
+                    <div class="content">
+                        <span class="tag">Советы</span>
+                        <h3>Системы полива: какой вариант выбрать</h3>
+                        <p>Обзор различных систем полива для теплиц и открытого грунта.</p>
+                        <div class="date">15 декабря 2023</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="YDOBREN.jpeg" alt="Компост">
+                    <div class="content">
+                        <span class="tag">Удобрения</span>
+                        <h3>Как приготовить качественный компост</h3>
+                        <p>Пошаговая инструкция по созданию компоста для улучшения почвы.</p>
+                        <div class="date">1 ноября 2023</div>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <img src="DEFENSE.webp" alt="Болезни">
+                    <div class="content">
+                        <span class="tag">Защита</span>
+                        <h3>Основные болезни томатов и их лечение</h3>
+                        <p>Как распознать и вылечить самые распространённые болезни томатов.</p>
+                        <div class="date">20 октября 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <p>📍 Улица Гагарина, 77, с. Колхозное</p>
+                        <p>📞 Тел: +7 (914) 760-25-00</p>
+                        <p>✉ Email: agrosnab-nevelsk@mail.ru</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Часы работы</h3>
+                    <div class="working-hours">
+                        <p>🕐 Пн-Пт: 7:00 - 17:00</p>
+                        <p>🕐 Сб: 7:00 - 16:00</p>
+                        <p>🕐 Вс: выходной</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <p style="text-align: left; font-size: 0.9rem; color: #e0e0e0;">Агроснаб Невельск — ваш надежный партнер в сельском хозяйстве с 2014 года.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">Агроснаб Невельск. Сабиров.Т ИСиП 1-23.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
